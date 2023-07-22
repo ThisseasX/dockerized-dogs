@@ -1,0 +1,75 @@
+.root {
+  font-family: sans-serif;
+}
+
+.fieldset {
+  margin-bottom: 32px;
+  border: 1px solid #ddd;
+}
+
+.mr4 {
+  margin-right: 4px;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #ddd;
+  text-transform: uppercase;
+  color: white;
+  padding: 4px 8px;
+
+  &:first-of-type {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-of-type {
+    border-radius: 0 4px 4px 0;
+  }
+
+  &:not(&:first-of-type) {
+    border-left: 1px solid #ddd;
+  }
+
+  &:not(&:last-of-type) {
+    border-right: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    background-color: #007bff;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    background-color: #28a745;
+  }
+
+  &:nth-of-type(5),
+  &:nth-of-type(6) {
+    background-color: #dc3545;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  & th {
+    text-align: left;
+  }
+
+  & td,
+  & th {
+    border: 1px solid #ddd;
+    padding: 6px 12px
+  }
+}

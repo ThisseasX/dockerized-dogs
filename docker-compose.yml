@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  fe:
+    image: dogs-fe
+    build: ./dogs-fe
+    ports:
+      - "80:80"
+  be:
+    image: dogs-be
+    build: ./dogs-be
+    ports:
+      - "3000:3000"
+  db:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
